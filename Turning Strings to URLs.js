@@ -4,7 +4,7 @@
 // check for spaces
 // remove spaces from string
 function spaceRemover (inputString) {
-  printArray= [];
+  let printArray= [];
   [...inputString].forEach(element => {
     if(element == " ") {
       element = "%20"
@@ -13,5 +13,18 @@ function spaceRemover (inputString) {
   });
   
   return printArray.join("");
+}
+
+function recursionRemover (inputString) {
+  if (!inputString) {
+    return "";
+  }
+  element = inputString.slice(-1);
+  if(element == " ") {
+    element = "%20"
+  }
+  console.log(element)
+  inputString = inputString.slice(0,-1);
+  return recursionRemover(inputString)
 }
 
