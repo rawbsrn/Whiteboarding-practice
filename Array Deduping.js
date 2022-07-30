@@ -10,3 +10,10 @@ function arrayDedup (input) {
   });
   return output
 }
+
+function filterDedup (input) {
+  let uniqueChars = input.filter((c, index) => {
+    return input.indexOf(c) === index;
+});
+return uniqueChars;
+}
