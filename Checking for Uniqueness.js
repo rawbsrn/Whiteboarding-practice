@@ -13,3 +13,5 @@ function includesString (input) {
 }
   return truthines;
 }
+
+
