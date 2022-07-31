@@ -1,0 +1,50 @@
+Question #5: Array Sorting
+Write an algorithm that sorts an array without using the sort() method. There are many different sorting algorithms — take the time to read about the following:
+Quick sort
+Merge sort
+Heap sort
+Insertion sort
+Bubble sort
+Selection sort
+You may implement any of the above algorithms (or your own) to solve the problem — as long as it doesn't use sort().
+Example
+Input: [9, 2, 7, 12]
+Output: [2, 7, 9, 12]
+Inputs: Array 
+
+Output: Sorted Array
+
+Using quicksort
+
+Function sort(arr) {
+	If (arr.length <= 1) {
+		Return arr;
+	}
+
+	Let pivot = arr[0];
+
+	Let left = [];
+	Let right = [];
+
+	For (let i = 1; i < arr.length; i++) { arr[i] < pivot ? left.push(arr[i]) : right.push(arr[i]);}
+
+	Return sort(left).concat(pivot,sort(right));
+};
+
+Text example:
+
+[5,9,3,7,1,2,4]
+Pivot = 5
+Is 5 > 9? => 9 goes right
+Is 5 > 3> => 3 goes left
+Is 5 > 7  => 7 goes right
+Is 5 > 1 => 1 goes left
+Is 5 > 2 => 2 goes left
+Is 5 > 4 => 4 goes left
+
+[3,1,2,4] [5] [9,7]
+[3,1,2,4]
+Pivot = 3
+Is 3 > 1? etc.
+
+
